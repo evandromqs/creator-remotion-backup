@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { MOTION_PALETTE, MOTION_SHADOWS } from "./tokens";
-import { springPop } from "./presets";
+import { springPop, floatLoop, tiltLoop, shimmerGlow } from "./presets";
 
 export interface InfographicCardProps {
   delay?: number;
@@ -27,19 +27,24 @@ export const InfographicCard: React.FC<InfographicCardProps> = ({
   const frame = useCurrentFrame();
   const pop = springPop(frame, 30, delay);
 
+  // Regra dos 3 segundos: Micro-animações contínuas em repouso
+  const floatY = floatLoop(frame + delay * 5, 36, 6);
+  const tilt = tiltLoop(frame + delay * 8, 48, 1.2);
+  const glowOp = shimmerGlow(frame, 28, 0.25, 0.65);
+
   if (pop <= 0.01) return null;
 
   return (
     <div
       style={{
-        transform: `scale(${pop}) translateY(${(1 - pop) * 30}px)`,
+        transform: `translateY(${floatY + (1 - pop) * 30}px) rotate(${tilt}deg) scale(${pop})`,
         opacity: pop,
-        background: "rgba(19, 27, 46, 0.88)",
-        backdropFilter: "blur(12px)",
+        background: "rgba(19, 27, 46, 0.92)",
+        backdropFilter: "blur(14px)",
         border: `2px solid ${accent}`,
         borderRadius: "20px",
         padding: "24px 32px",
-        boxShadow: `${MOTION_SHADOWS.card}, 0 0 25px ${accent}33`,
+        boxShadow: `${MOTION_SHADOWS.card}, 0 0 30px ${accent}${Math.round(glowOp * 255).toString(16).padStart(2, "0")}`,
         display: "flex",
         flexDirection: "column",
         gap: "10px",

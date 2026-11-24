@@ -1,6 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { drawOn, pulseLoop } from "../presets";
+import { drawOn, pulseLoop, float2D, tiltLoop } from "../presets";
+import { MOTION_PALETTE } from "../tokens";
 
 export interface VectorPhoneGpsProps {
   scale?: number;
@@ -15,10 +16,29 @@ export const VectorPhoneGps: React.FC<VectorPhoneGpsProps> = ({
   const pulse = pulseLoop(frame, 20, 0.15);
   const strokeOffset = drawOn(frame, 5, 45, 320);
 
+  // Regra dos 3 segundos: Smartphone com micro-flutuação 2D e leve balanço angular
+  const float = float2D(frame, 40, 30, 8, 12);
+  const tilt = tiltLoop(frame, 45, 1.8);
+
+  // Animação contínua da posição do carro percorrendo a rota
+  // Rota tem pontos: (90,440) -> (90,320) -> (140,320) -> (140,180) -> (190,180) -> (190,80)
+  const carProgress = ((frame * 1.5) % 200) / 200; // ciclo contínuo
+  const carY = 440 - carProgress * 360;
+  const carX = carY > 320 ? 90 : (carY > 180 ? 140 : 190);
+
+  // Pulso de ondas de sinal do GPS descendo sobre o celular
+  const signalRings = [0, 1, 2].map((idx) => {
+    const phase = ((frame + idx * 25) % 75) / 75;
+    return {
+      r: 12 + phase * 40,
+      opacity: (1 - phase) * 0.7,
+    };
+  });
+
   return (
     <div
       style={{
-        transform: `scale(${scale})`,
+        transform: `translate(${float.x}px, ${float.y}px) rotate(${tilt}deg) scale(${scale})`,
         display: "inline-block",
         position: "relative",
       }}
@@ -80,11 +100,50 @@ export const VectorPhoneGps: React.FC<VectorPhoneGpsProps> = ({
             />
           )}
 
-          {/* Pin de Localização Atual do Carro */}
-          <g transform={driftError ? "translate(70, 280)" : "translate(140, 200)"}>
-            <circle cx="0" cy="0" r={16 * pulse} fill={driftError ? "rgba(239,68,68,0.35)" : "rgba(56,189,248,0.35)"} />
-            <circle cx="0" cy="0" r="8" fill={driftError ? "#EF4444" : "#38BDF8"} />
-            <circle cx="0" cy="0" r="3" fill="#FFF" />
+          {/* Ondas de Sinal de GPS recebidas no Smartphone */}
+          <g transform="translate(140, 46)">
+            {signalRings.map((ring, i) => (
+              <circle
+                key={i}
+                cx="0"
+                cy="0"
+                r={ring.r}
+                fill="none"
+                stroke={driftError ? "#EF4444" : "#38BDF8"}
+                strokeWidth="2"
+                opacity={ring.opacity}
+              />
+            ))}
+          </g>
+
+          {/* Pin de Localização Atual do Carro (Dinâmico / Percorrendo Rota) */}
+          <g
+            transform={
+              driftError
+                ? "translate(70, 280)"
+                : `translate(${carX}, ${carY})`
+            }
+          >
+            <circle
+              cx="0"
+              cy="0"
+              r={18 * pulse}
+              fill={driftError ? "rgba(239,68,68,0.4)" : "rgba(56,189,248,0.4)"}
+            />
+            <circle
+              cx="0"
+              cy="0"
+              r="9"
+              fill={driftError ? "#EF4444" : "#38BDF8"}
+              stroke="#FFFFFF"
+              strokeWidth="2"
+            />
+            {/* Ícone sutil de veículo em movimento */}
+            <path
+              d="M -4 2 L 0 -5 L 4 2 Z"
+              fill="#FFFFFF"
+              transform={`rotate(${carY > 320 ? 0 : carY > 180 ? 90 : 0})`}
+            />
           </g>
 
           {/* Top Bar do GPS */}

@@ -59,8 +59,34 @@ export function floatLoop(frame: number, speed = 40, amplitude = 10) {
 }
 
 /**
- * Pulso contínuo de escala
+ * Flutuação 2D suave (eixos X e Y descentralizados) para objetos em cena
+ */
+export function float2D(frame: number, speedX = 45, speedY = 35, ampX = 6, ampY = 9) {
+  return {
+    x: Math.cos(frame / speedX) * ampX,
+    y: Math.sin(frame / speedY) * ampY,
+  };
+}
+
+/**
+ * Pulso contínuo de escala (efeito respiração)
  */
 export function pulseLoop(frame: number, speed = 25, scaleDelta = 0.05) {
   return 1 + Math.sin(frame / speed) * scaleDelta;
 }
+
+/**
+ * Variação contínua de rotação sutil para cartões ou objetos flutuantes
+ */
+export function tiltLoop(frame: number, speed = 50, maxDeg = 1.8) {
+  return Math.sin(frame / speed) * maxDeg;
+}
+
+/**
+ * Pulso de brilho suave (Shimmer de opacidade)
+ */
+export function shimmerGlow(frame: number, speed = 30, minOp = 0.35, maxOp = 0.85) {
+  const norm = (Math.sin(frame / speed) + 1) / 2;
+  return minOp + norm * (maxOp - minOp);
+}
+
