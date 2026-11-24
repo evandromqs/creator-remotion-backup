@@ -1,0 +1,49 @@
+{
+  "system": "Modern Explainer",
+  "targetEngine": "Remotion (React + TypeScript + SVG)",
+  "palette": {
+    "dominant": {
+      "name": "Azul",
+      "hex": "#2457D6"
+    },
+    "accent": {
+      "name": "Âmbar",
+      "hex": "#FFB84D"
+    },
+    "secondaryCoral": {
+      "name": "Coral",
+      "hex": "#F16D5B"
+    },
+    "secondaryGreen": {
+      "name": "Verde",
+      "hex": "#63B98B"
+    },
+    "neutral": {
+      "name": "Neutro",
+      "hex": "#F3F4F6"
+    }
+  },
+  "colorDistributionGuideline": {
+    "neutralPercent": 60,
+    "dominantPercent": 25,
+    "secondaryPercent": 10,
+    "accentPercent": 5
+  },
+  "animationPresets": [
+    "fadeIn",
+    "slideIn",
+    "popIn",
+    "scaleUp",
+    "float",
+    "bounce",
+    "drawOn",
+    "morph",
+    "stagger",
+    "cameraPush",
+    "cameraPull"
+  ],
+  "compositions": [
+    "16:9",
+    "9:16"
+  ]
+}
