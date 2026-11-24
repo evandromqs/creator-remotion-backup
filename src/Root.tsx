@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { z } from "zod";
 import { DynamicMain } from "./DynamicMain";
+import { Short30s } from "./Short30s";
 import scenesData from "./data/scenes.json";
 
 export const VideoPropsSchema = z.object({
@@ -23,6 +24,17 @@ export const Root: React.FC = () => {
         width={scenesData.meta.width}
         height={scenesData.meta.height}
         durationInFrames={scenesData.meta.durationInFrames}
+        defaultProps={{}}
+      />
+
+      {/* SHORT 30s — Corte Direcionado (9 cenas / 900 frames) */}
+      <Composition
+        id="Short30s"
+        component={Short30s}
+        fps={30}
+        width={1080}
+        height={1920}
+        durationInFrames={900}
         defaultProps={{}}
       />
     </>
