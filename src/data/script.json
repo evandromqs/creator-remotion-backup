@@ -1,0 +1,87 @@
+{
+  "topic": "gps",
+  "title": "A Origem Secreta do GPS",
+  "fullText": "Você abre o mapa no celular todo dia... mas sabia que sem Einstein, você estaria perdido? Sem a física moderna, o seu GPS erraria o seu destino por mais de onze quilômetros... todo santo dia! Tudo começou em mil novecentos e cinquenta e sete, em plena Guerra Fria, com o satélite soviético Sputnik. Cientistas perceberam que o sinal de rádio mudava conforme o satélite se movia... o famoso Efeito Doppler! A sacada genial foi: se sabemos a órbita do satélite pelo som, podemos localizar qualquer ponto na Terra! Assim nasceu o projeto GPS: uma constelação de trinta e um satélites a mais de vinte mil quilômetros de altitude. Dentro de cada um, um relógio atômico de césio mede o tempo com precisão de bilionésimos de segundo. Mas quando os primeiros satélites subiram... o tempo no espaço enlouqueceu! A teoria da relatividade de Einstein prevê dois efeitos opostos. Primeiro: a velocidade extrema faz o tempo passar mais devagar no satélite: menos sete microssegundos por dia! Segundo: longe da gravidade pesada da Terra, o tempo corre mais rápido: mais quarenta e cinco microssegundos! O resultado dessa conta cósmica? Mais quarenta e cinco menos sete... trinta e oito microssegundos de diferença todo dia! Parece pouco? Multiplicado pela velocidade da luz, trinta e oito microssegundos jogariam o seu carro dentro do rio a onze quilômetros de distância! Engenheiros militares tiveram que reprogramar os computadores de bordo para desacelerar os relógios no espaço antes do lançamento! Em mil novecentos e oitenta e três, o governo americano liberou o sinal para uso civil mundial... e mudou a história. Hoje, do seu pedido de comida aos aviões supersônicos, o mundo inteiro depende dessa dança cósmica. Sabia que Einstein guia o seu delivery? Comenta aí e segue o laboratório!",
+  "scenes": [
+    {
+      "id": "S01_Hook",
+      "title": "O Erro Fatal",
+      "text": "Você abre o mapa no celular todo dia... mas sabia que sem Einstein, você estaria perdido?"
+    },
+    {
+      "id": "S02_Desvio",
+      "title": "O Desvio Diário",
+      "text": "Sem a física moderna, o seu GPS erraria o seu destino por mais de onze quilômetros... todo santo dia!"
+    },
+    {
+      "id": "S03_GuerraFria",
+      "title": "A Guerra Fria 1957",
+      "text": "Tudo começou em mil novecentos e cinquenta e sete, em plena Guerra Fria, com o satélite soviético Sputnik."
+    },
+    {
+      "id": "S04_EfeitoDoppler",
+      "title": "O Efeito Doppler",
+      "text": "Cientistas perceberam que o sinal de rádio mudava conforme o satélite se movia... o famoso Efeito Doppler!"
+    },
+    {
+      "id": "S05_SacadaGenial",
+      "title": "A Sacada Genial",
+      "text": "A sacada genial foi: se sabemos a órbita do satélite pelo som, podemos localizar qualquer ponto na Terra!"
+    },
+    {
+      "id": "S06_Constelacao",
+      "title": "A Frota Orbital",
+      "text": "Assim nasceu o projeto GPS: uma constelação de trinta e um satélites a mais de vinte mil quilômetros de altitude."
+    },
+    {
+      "id": "S07_RelogioAtomico",
+      "title": "O Relógio Atômico",
+      "text": "Dentro de cada um, um relógio atômico de césio mede o tempo com precisão de bilionésimos de segundo."
+    },
+    {
+      "id": "S08_TempoEnlouqueceu",
+      "title": "O Tempo Enlouqueceu",
+      "text": "Mas quando os primeiros satélites subiram... o tempo no espaço enlouqueceu!"
+    },
+    {
+      "id": "S09_RelatividadeEspecial",
+      "title": "A Relatividade Especial",
+      "text": "A teoria da relatividade de Einstein prevê dois efeitos opostos. Primeiro: a velocidade extrema faz o tempo passar mais devagar no satélite: menos sete microssegundos por dia!"
+    },
+    {
+      "id": "S10_RelatividadeGeral",
+      "title": "A Gravidade e o Tempo",
+      "text": "Segundo: longe da gravidade pesada da Terra, o tempo corre mais rápido: mais quarenta e cinco microssegundos!"
+    },
+    {
+      "id": "S11_CalculoCosmico",
+      "title": "A Matemática Espacial",
+      "text": "O resultado dessa conta cósmica? Mais quarenta e cinco menos sete... trinta e oito microssegundos de diferença todo dia!"
+    },
+    {
+      "id": "S12_ImpactoMundoReal",
+      "title": "O Impacto no Mundo Real",
+      "text": "Parece pouco? Multiplicado pela velocidade da luz, trinta e oito microssegundos jogariam o seu carro dentro do rio a onze quilômetros de distância!"
+    },
+    {
+      "id": "S13_Engenheiros",
+      "title": "A Correção nos Chips",
+      "text": "Engenheiros militares tiveram que reprogramar os computadores de bordo para desacelerar os relógios no espaço antes do lançamento!"
+    },
+    {
+      "id": "S14_LiberadoCivil",
+      "title": "Abertura ao Mundo 1983",
+      "text": "Em mil novecentos e oitenta e três, o governo americano liberou o sinal para uso civil mundial... e mudou a história."
+    },
+    {
+      "id": "S15_ConexaoHoje",
+      "title": "Conexão Hoje",
+      "text": "Hoje, do seu pedido de comida aos aviões supersônicos, o mundo inteiro depende dessa dança cósmica."
+    },
+    {
+      "id": "S16_CTA",
+      "title": "Chamada para Ação",
+      "text": "Sabia que Einstein guia o seu delivery? Comenta aí e segue o laboratório!"
+    }
+  ]
+}

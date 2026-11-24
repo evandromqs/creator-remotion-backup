@@ -1,0 +1,11 @@
+[
+  {
+    "id": "scene_01",
+    "title": "Cena Inicial",
+    "startSec": 0,
+    "endSec": 5,
+    "startFrame": 0,
+    "endFrame": 150,
+    "durationFrames": 150
+  }
+]
