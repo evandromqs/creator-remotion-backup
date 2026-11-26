@@ -4,6 +4,7 @@ import { z } from "zod";
 import { DynamicMain } from "./DynamicMain";
 import { Short30s } from "./Short30s";
 import { FlatShort30s } from "./flat/FlatShort30s";
+import { FlatMain } from "./flat/FlatMain";
 import scenesData from "./data/scenes.json";
 
 export const VideoPropsSchema = z.object({
@@ -47,6 +48,17 @@ export const Root: React.FC = () => {
         width={1080}
         height={1920}
         durationInFrames={900}
+        defaultProps={{}}
+      />
+
+      {/* FLAT MAIN — Vídeo Completo (18 cenas / 3400 frames / 113.3s) em Solid Flat 2.5D */}
+      <Composition
+        id="FlatMain"
+        component={FlatMain}
+        fps={scenesData.meta.fps}
+        width={scenesData.meta.width}
+        height={scenesData.meta.height}
+        durationInFrames={scenesData.meta.durationInFrames}
         defaultProps={{}}
       />
     </>
