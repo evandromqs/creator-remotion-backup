@@ -3,11 +3,29 @@ import { useCurrentFrame } from "remotion";
 import scenesData from "../data/scenes.json";
 import { theme } from "../design/theme";
 
-export const DynamicCaptions: React.FC = () => {
+export interface CaptionWord {
+  text: string;
+  from: number;
+  to: number;
+  highlight?: boolean;
+}
+
+export interface CaptionScene {
+  from: number;
+  durationInFrames: number;
+  captions?: CaptionWord[];
+}
+
+export interface DynamicCaptionsProps {
+  scenes?: CaptionScene[];
+}
+
+export const DynamicCaptions: React.FC<DynamicCaptionsProps> = ({ scenes }) => {
   const frame = useCurrentFrame();
+  const activeScenes: CaptionScene[] = scenes || scenesData.scenes;
 
   // Encontra a cena atual
-  const currentScene = scenesData.scenes.find(
+  const currentScene = activeScenes.find(
     (s) => frame >= s.from && frame < s.from + s.durationInFrames
   );
 

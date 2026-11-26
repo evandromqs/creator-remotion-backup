@@ -1,0 +1,843 @@
+{
+  "meta": {
+    "title": "Hedy Lamarr e o Bluetooth",
+    "channel": "Evandro Lab",
+    "language": "pt-BR",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationInFrames": 1444,
+    "durationSec": 48.13,
+    "composition": "HedyBluetooth"
+  },
+  "audio": {
+    "narration": {
+      "src": "public/hedy_narracao.mp3",
+      "volume": 1
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "index": 1,
+      "component": "HedyHook",
+      "from": 0,
+      "durationInFrames": 154,
+      "narration": "O Bluetooth do seu fone de ouvido existe graças a uma atriz de Hollywood e um piano.",
+      "captions": [
+        {
+          "text": "O",
+          "from": 0,
+          "to": 2,
+          "highlight": false
+        },
+        {
+          "text": "Bluetooth",
+          "from": 5,
+          "to": 21,
+          "highlight": false
+        },
+        {
+          "text": "do",
+          "from": 23,
+          "to": 26,
+          "highlight": false
+        },
+        {
+          "text": "seu",
+          "from": 28,
+          "to": 31,
+          "highlight": false
+        },
+        {
+          "text": "fone",
+          "from": 33,
+          "to": 39,
+          "highlight": false
+        },
+        {
+          "text": "de",
+          "from": 40,
+          "to": 42,
+          "highlight": false
+        },
+        {
+          "text": "ouvido",
+          "from": 43,
+          "to": 53,
+          "highlight": false
+        },
+        {
+          "text": "existe",
+          "from": 54,
+          "to": 67,
+          "highlight": false
+        },
+        {
+          "text": "graças",
+          "from": 70,
+          "to": 84,
+          "highlight": false
+        },
+        {
+          "text": "a",
+          "from": 85,
+          "to": 86,
+          "highlight": false
+        },
+        {
+          "text": "uma",
+          "from": 87,
+          "to": 92,
+          "highlight": false
+        },
+        {
+          "text": "atriz",
+          "from": 92,
+          "to": 104,
+          "highlight": false
+        },
+        {
+          "text": "de",
+          "from": 106,
+          "to": 108,
+          "highlight": false
+        },
+        {
+          "text": "Hollywood",
+          "from": 110,
+          "to": 127,
+          "highlight": false
+        },
+        {
+          "text": "e",
+          "from": 128,
+          "to": 129,
+          "highlight": false
+        },
+        {
+          "text": "um",
+          "from": 131,
+          "to": 133,
+          "highlight": false
+        },
+        {
+          "text": "piano.",
+          "from": 135,
+          "to": 153,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "id": "torpedo",
+      "index": 2,
+      "component": "TorpedoJam",
+      "from": 154,
+      "durationInFrames": 322,
+      "narration": "Em 1942, na Segunda Guerra Mundial, a estrela Hedy Lamarr descobriu que torpedos guiados por rádio podiam ser facilmente bloqueados pelo inimigo.",
+      "captions": [
+        {
+          "text": "Em",
+          "from": 154,
+          "to": 158,
+          "highlight": false
+        },
+        {
+          "text": "1942,",
+          "from": 158,
+          "to": 195,
+          "highlight": false
+        },
+        {
+          "text": "na",
+          "from": 196,
+          "to": 199,
+          "highlight": false
+        },
+        {
+          "text": "Segunda",
+          "from": 201,
+          "to": 212,
+          "highlight": false
+        },
+        {
+          "text": "Guerra",
+          "from": 214,
+          "to": 220,
+          "highlight": false
+        },
+        {
+          "text": "Mundial,",
+          "from": 222,
+          "to": 238,
+          "highlight": false
+        },
+        {
+          "text": "a",
+          "from": 239,
+          "to": 241,
+          "highlight": false
+        },
+        {
+          "text": "estrela",
+          "from": 243,
+          "to": 259,
+          "highlight": false
+        },
+        {
+          "text": "Hedy",
+          "from": 261,
+          "to": 271,
+          "highlight": false
+        },
+        {
+          "text": "Lamarr",
+          "from": 272,
+          "to": 287,
+          "highlight": false
+        },
+        {
+          "text": "descobriu",
+          "from": 288,
+          "to": 308,
+          "highlight": false
+        },
+        {
+          "text": "que",
+          "from": 310,
+          "to": 312,
+          "highlight": false
+        },
+        {
+          "text": "torpedos",
+          "from": 314,
+          "to": 332,
+          "highlight": false
+        },
+        {
+          "text": "guiados",
+          "from": 334,
+          "to": 350,
+          "highlight": false
+        },
+        {
+          "text": "por",
+          "from": 352,
+          "to": 357,
+          "highlight": false
+        },
+        {
+          "text": "rádio",
+          "from": 359,
+          "to": 370,
+          "highlight": false
+        },
+        {
+          "text": "podiam",
+          "from": 371,
+          "to": 384,
+          "highlight": false
+        },
+        {
+          "text": "ser",
+          "from": 386,
+          "to": 392,
+          "highlight": false
+        },
+        {
+          "text": "facilmente",
+          "from": 395,
+          "to": 421,
+          "highlight": false
+        },
+        {
+          "text": "bloqueados",
+          "from": 423,
+          "to": 445,
+          "highlight": false
+        },
+        {
+          "text": "pelo",
+          "from": 448,
+          "to": 454,
+          "highlight": false
+        },
+        {
+          "text": "inimigo.",
+          "from": 455,
+          "to": 475,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "id": "piano",
+      "index": 3,
+      "component": "PianoIdea",
+      "from": 476,
+      "durationInFrames": 199,
+      "narration": "Junto com o compositor George Antheil, ela criou um sistema genial inspirado em um piano mecânico perfurado.",
+      "captions": [
+        {
+          "text": "Junto",
+          "from": 476,
+          "to": 485,
+          "highlight": false
+        },
+        {
+          "text": "com",
+          "from": 487,
+          "to": 490,
+          "highlight": false
+        },
+        {
+          "text": "o",
+          "from": 491,
+          "to": 492,
+          "highlight": false
+        },
+        {
+          "text": "compositor",
+          "from": 492,
+          "to": 511,
+          "highlight": false
+        },
+        {
+          "text": "George",
+          "from": 513,
+          "to": 523,
+          "highlight": false
+        },
+        {
+          "text": "Antheil,",
+          "from": 525,
+          "to": 544,
+          "highlight": false
+        },
+        {
+          "text": "ela",
+          "from": 545,
+          "to": 552,
+          "highlight": false
+        },
+        {
+          "text": "criou",
+          "from": 553,
+          "to": 563,
+          "highlight": false
+        },
+        {
+          "text": "um",
+          "from": 566,
+          "to": 567,
+          "highlight": false
+        },
+        {
+          "text": "sistema",
+          "from": 569,
+          "to": 581,
+          "highlight": false
+        },
+        {
+          "text": "genial",
+          "from": 583,
+          "to": 601,
+          "highlight": false
+        },
+        {
+          "text": "inspirado",
+          "from": 603,
+          "to": 618,
+          "highlight": false
+        },
+        {
+          "text": "em",
+          "from": 619,
+          "to": 620,
+          "highlight": false
+        },
+        {
+          "text": "um",
+          "from": 622,
+          "to": 623,
+          "highlight": false
+        },
+        {
+          "text": "piano",
+          "from": 625,
+          "to": 633,
+          "highlight": false
+        },
+        {
+          "text": "mecânico",
+          "from": 635,
+          "to": 651,
+          "highlight": false
+        },
+        {
+          "text": "perfurado.",
+          "from": 652,
+          "to": 675,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "id": "hopping",
+      "index": 4,
+      "component": "FrequencyHopping",
+      "from": 675,
+      "durationInFrames": 234,
+      "narration": "O sinal saltava entre 88 frequências diferentes em sincronia, tornando impossível interceptar ou travar o torpedo.",
+      "captions": [
+        {
+          "text": "O",
+          "from": 675,
+          "to": 677,
+          "highlight": false
+        },
+        {
+          "text": "sinal",
+          "from": 680,
+          "to": 688,
+          "highlight": false
+        },
+        {
+          "text": "saltava",
+          "from": 689,
+          "to": 709,
+          "highlight": false
+        },
+        {
+          "text": "entre",
+          "from": 711,
+          "to": 717,
+          "highlight": false
+        },
+        {
+          "text": "88",
+          "from": 719,
+          "to": 733,
+          "highlight": false
+        },
+        {
+          "text": "frequências",
+          "from": 735,
+          "to": 752,
+          "highlight": false
+        },
+        {
+          "text": "diferentes",
+          "from": 753,
+          "to": 773,
+          "highlight": false
+        },
+        {
+          "text": "em",
+          "from": 774,
+          "to": 775,
+          "highlight": false
+        },
+        {
+          "text": "sincronia,",
+          "from": 777,
+          "to": 798,
+          "highlight": false
+        },
+        {
+          "text": "tornando",
+          "from": 799,
+          "to": 810,
+          "highlight": false
+        },
+        {
+          "text": "impossível",
+          "from": 812,
+          "to": 835,
+          "highlight": false
+        },
+        {
+          "text": "interceptar",
+          "from": 837,
+          "to": 858,
+          "highlight": false
+        },
+        {
+          "text": "ou",
+          "from": 862,
+          "to": 868,
+          "highlight": false
+        },
+        {
+          "text": "travar",
+          "from": 870,
+          "to": 886,
+          "highlight": false
+        },
+        {
+          "text": "o",
+          "from": 887,
+          "to": 888,
+          "highlight": false
+        },
+        {
+          "text": "torpedo.",
+          "from": 890,
+          "to": 908,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "id": "bluetooth",
+      "index": 5,
+      "component": "NavyToBluetooth",
+      "from": 909,
+      "durationInFrames": 240,
+      "narration": "A Marinha engavetou a patente na época, mas décadas depois esse salto de frequência virou a base do Bluetooth e da conexão sem fio.",
+      "captions": [
+        {
+          "text": "A",
+          "from": 909,
+          "to": 910,
+          "highlight": false
+        },
+        {
+          "text": "Marinha",
+          "from": 913,
+          "to": 923,
+          "highlight": false
+        },
+        {
+          "text": "engavetou",
+          "from": 924,
+          "to": 940,
+          "highlight": false
+        },
+        {
+          "text": "a",
+          "from": 942,
+          "to": 943,
+          "highlight": false
+        },
+        {
+          "text": "patente",
+          "from": 944,
+          "to": 956,
+          "highlight": false
+        },
+        {
+          "text": "na",
+          "from": 958,
+          "to": 961,
+          "highlight": false
+        },
+        {
+          "text": "época,",
+          "from": 965,
+          "to": 977,
+          "highlight": false
+        },
+        {
+          "text": "mas",
+          "from": 978,
+          "to": 985,
+          "highlight": false
+        },
+        {
+          "text": "décadas",
+          "from": 988,
+          "to": 1002,
+          "highlight": false
+        },
+        {
+          "text": "depois",
+          "from": 1003,
+          "to": 1018,
+          "highlight": false
+        },
+        {
+          "text": "esse",
+          "from": 1019,
+          "to": 1026,
+          "highlight": false
+        },
+        {
+          "text": "salto",
+          "from": 1028,
+          "to": 1038,
+          "highlight": false
+        },
+        {
+          "text": "de",
+          "from": 1040,
+          "to": 1042,
+          "highlight": false
+        },
+        {
+          "text": "frequência",
+          "from": 1043,
+          "to": 1061,
+          "highlight": false
+        },
+        {
+          "text": "virou",
+          "from": 1062,
+          "to": 1070,
+          "highlight": false
+        },
+        {
+          "text": "a",
+          "from": 1072,
+          "to": 1073,
+          "highlight": false
+        },
+        {
+          "text": "base",
+          "from": 1075,
+          "to": 1087,
+          "highlight": false
+        },
+        {
+          "text": "do",
+          "from": 1088,
+          "to": 1090,
+          "highlight": false
+        },
+        {
+          "text": "Bluetooth",
+          "from": 1092,
+          "to": 1107,
+          "highlight": false
+        },
+        {
+          "text": "e",
+          "from": 1108,
+          "to": 1109,
+          "highlight": false
+        },
+        {
+          "text": "da",
+          "from": 1111,
+          "to": 1113,
+          "highlight": false
+        },
+        {
+          "text": "conexão",
+          "from": 1115,
+          "to": 1129,
+          "highlight": false
+        },
+        {
+          "text": "sem",
+          "from": 1130,
+          "to": 1135,
+          "highlight": false
+        },
+        {
+          "text": "fio.",
+          "from": 1137,
+          "to": 1148,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "index": 6,
+      "component": "EvandroLabCta",
+      "from": 1149,
+      "durationInFrames": 295,
+      "narration": "E aí, você já sabia que uma atriz ajudou a criar o seu fone sem fio? Comenta aqui embaixo o que achou e segue o canal Evandro Lab para mais histórias!",
+      "captions": [
+        {
+          "text": "E",
+          "from": 1149,
+          "to": 1151,
+          "highlight": false
+        },
+        {
+          "text": "aí,",
+          "from": 1154,
+          "to": 1159,
+          "highlight": false
+        },
+        {
+          "text": "você",
+          "from": 1160,
+          "to": 1165,
+          "highlight": false
+        },
+        {
+          "text": "já",
+          "from": 1167,
+          "to": 1170,
+          "highlight": false
+        },
+        {
+          "text": "sabia",
+          "from": 1172,
+          "to": 1184,
+          "highlight": false
+        },
+        {
+          "text": "que",
+          "from": 1186,
+          "to": 1189,
+          "highlight": false
+        },
+        {
+          "text": "uma",
+          "from": 1190,
+          "to": 1194,
+          "highlight": false
+        },
+        {
+          "text": "atriz",
+          "from": 1195,
+          "to": 1208,
+          "highlight": false
+        },
+        {
+          "text": "ajudou",
+          "from": 1210,
+          "to": 1223,
+          "highlight": false
+        },
+        {
+          "text": "a",
+          "from": 1224,
+          "to": 1225,
+          "highlight": false
+        },
+        {
+          "text": "criar",
+          "from": 1226,
+          "to": 1237,
+          "highlight": false
+        },
+        {
+          "text": "o",
+          "from": 1239,
+          "to": 1240,
+          "highlight": false
+        },
+        {
+          "text": "seu",
+          "from": 1241,
+          "to": 1245,
+          "highlight": false
+        },
+        {
+          "text": "fone",
+          "from": 1248,
+          "to": 1259,
+          "highlight": false
+        },
+        {
+          "text": "sem",
+          "from": 1261,
+          "to": 1268,
+          "highlight": false
+        },
+        {
+          "text": "fio?",
+          "from": 1270,
+          "to": 1282,
+          "highlight": false
+        },
+        {
+          "text": "Comenta",
+          "from": 1283,
+          "to": 1295,
+          "highlight": false
+        },
+        {
+          "text": "aqui",
+          "from": 1295,
+          "to": 1301,
+          "highlight": false
+        },
+        {
+          "text": "embaixo",
+          "from": 1302,
+          "to": 1317,
+          "highlight": false
+        },
+        {
+          "text": "o",
+          "from": 1319,
+          "to": 1320,
+          "highlight": false
+        },
+        {
+          "text": "que",
+          "from": 1322,
+          "to": 1325,
+          "highlight": false
+        },
+        {
+          "text": "achou",
+          "from": 1326,
+          "to": 1337,
+          "highlight": false
+        },
+        {
+          "text": "e",
+          "from": 1340,
+          "to": 1341,
+          "highlight": false
+        },
+        {
+          "text": "segue",
+          "from": 1343,
+          "to": 1351,
+          "highlight": false
+        },
+        {
+          "text": "o",
+          "from": 1352,
+          "to": 1353,
+          "highlight": false
+        },
+        {
+          "text": "canal",
+          "from": 1353,
+          "to": 1362,
+          "highlight": false
+        },
+        {
+          "text": "Evandro",
+          "from": 1364,
+          "to": 1376,
+          "highlight": false
+        },
+        {
+          "text": "Lab",
+          "from": 1378,
+          "to": 1384,
+          "highlight": false
+        },
+        {
+          "text": "para",
+          "from": 1387,
+          "to": 1393,
+          "highlight": false
+        },
+        {
+          "text": "mais",
+          "from": 1395,
+          "to": 1400,
+          "highlight": false
+        },
+        {
+          "text": "histórias!",
+          "from": 1402,
+          "to": 1425,
+          "highlight": false
+        }
+      ]
+    }
+  ]
+}

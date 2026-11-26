@@ -5,7 +5,9 @@ import { DynamicMain } from "./DynamicMain";
 import { Short30s } from "./Short30s";
 import { FlatShort30s } from "./flat/FlatShort30s";
 import { FlatMain } from "./flat/FlatMain";
+import { HedyBluetooth } from "./flat/HedyBluetooth";
 import scenesData from "./data/scenes.json";
+import hedyScenes from "./data/hedy_scenes.json";
 
 export const VideoPropsSchema = z.object({
   audioSrc: z.string().default("narracao.mp3"),
@@ -59,6 +61,17 @@ export const Root: React.FC = () => {
         width={scenesData.meta.width}
         height={scenesData.meta.height}
         durationInFrames={scenesData.meta.durationInFrames}
+        defaultProps={{}}
+      />
+
+      {/* HEDY BLUETOOTH — História de Tecnologia (Evandro Lab) em Solid Flat 2.5D */}
+      <Composition
+        id="HedyBluetooth"
+        component={HedyBluetooth}
+        fps={hedyScenes.meta.fps}
+        width={hedyScenes.meta.width}
+        height={hedyScenes.meta.height}
+        durationInFrames={hedyScenes.meta.durationInFrames}
         defaultProps={{}}
       />
     </>
