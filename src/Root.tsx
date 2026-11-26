@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { z } from "zod";
 import { DynamicMain } from "./DynamicMain";
 import { Short30s } from "./Short30s";
+import { FlatShort30s } from "./flat/FlatShort30s";
 import scenesData from "./data/scenes.json";
 
 export const VideoPropsSchema = z.object({
@@ -31,6 +32,17 @@ export const Root: React.FC = () => {
       <Composition
         id="Short30s"
         component={Short30s}
+        fps={30}
+        width={1080}
+        height={1920}
+        durationInFrames={900}
+        defaultProps={{}}
+      />
+
+      {/* FLAT SHORT 30s — Flat 2.5D recriado do zero, sincronizado com a narração */}
+      <Composition
+        id="FlatShort30s"
+        component={FlatShort30s}
         fps={30}
         width={1080}
         height={1920}

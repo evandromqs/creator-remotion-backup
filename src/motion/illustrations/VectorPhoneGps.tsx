@@ -1,7 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { drawOn, pulseLoop, float2D, tiltLoop } from "../presets";
-import { MOTION_PALETTE } from "../tokens";
 
 export interface VectorPhoneGpsProps {
   scale?: number;

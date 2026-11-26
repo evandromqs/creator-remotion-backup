@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { pulseLoop } from "../presets";
+import { float2D, pulseLoop, shimmerGlow, tiltLoop } from "../presets";
 
 export interface VectorAtomicClockProps {
   scale?: number;
@@ -13,6 +13,9 @@ export const VectorAtomicClock: React.FC<VectorAtomicClockProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const pulse = pulseLoop(frame, 15, 0.06);
+  const float = float2D(frame, 50, 38, 4, 6);
+  const tilt = tiltLoop(frame, 60, 1.2);
+  const coreGlow = shimmerGlow(frame, 20, 0.65, 1);
   const rot1 = (frame * 1.8) % 360;
   const rot2 = (-frame * 1.5) % 360;
   const rot3 = (frame * 1.2) % 360;
@@ -20,7 +23,7 @@ export const VectorAtomicClock: React.FC<VectorAtomicClockProps> = ({
   return (
     <div
       style={{
-        transform: `scale(${scale * pulse})`,
+        transform: `translate(${float.x}px, ${float.y}px) rotate(${tilt}deg) scale(${scale * pulse})`,
         display: "inline-flex",
         flexDirection: "column",
         alignItems: "center",
@@ -38,7 +41,16 @@ export const VectorAtomicClock: React.FC<VectorAtomicClockProps> = ({
 
         {/* Círculo do Gabinete do Relógio */}
         <circle cx="150" cy="150" r="135" fill="#131B2E" stroke="#38BDF8" strokeWidth="4" />
-        <circle cx="150" cy="150" r="122" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeDasharray="4 6" />
+        <circle
+          cx="150"
+          cy="150"
+          r="122"
+          fill="none"
+          stroke="rgba(255,255,255,0.12)"
+          strokeWidth="2"
+          strokeDasharray="4 6"
+          strokeDashoffset={-frame * 0.5}
+        />
 
         {/* Órbitas Eletrônicas em Torno do Núcleo de Césio */}
         <ellipse
@@ -76,7 +88,7 @@ export const VectorAtomicClock: React.FC<VectorAtomicClockProps> = ({
         />
 
         {/* Núcleo de Césio-133 com Pulsação */}
-        <circle cx="150" cy="150" r="32" fill="url(#atom-core-glow)" />
+        <circle cx="150" cy="150" r="32" fill="url(#atom-core-glow)" opacity={coreGlow} />
         <circle cx="150" cy="150" r="14" fill="#FBBF24" />
       </svg>
 

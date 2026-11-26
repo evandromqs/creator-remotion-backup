@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { MOTION_PALETTE } from "../tokens";
-import { floatLoop } from "../presets";
+import { float2D, pulseLoop, shimmerGlow, tiltLoop } from "../presets";
 
 export interface VectorSatelliteProps {
   scale?: number;
@@ -15,13 +15,16 @@ export const VectorSatellite: React.FC<VectorSatelliteProps> = ({
   angle = -15,
 }) => {
   const frame = useCurrentFrame();
-  const floatY = floatLoop(frame, 30, 8);
-  const floatX = floatLoop(frame + 15, 45, 4);
+  const float = float2D(frame, 45, 30, 5, 8);
+  const tilt = tiltLoop(frame, 50, 2);
+  const ledGlow1 = shimmerGlow(frame, 18, 0.45, 1);
+  const ledGlow2 = shimmerGlow(frame + 20, 22, 0.45, 1);
+  const antennaPulse = pulseLoop(frame, 16, 0.2);
 
   return (
     <div
       style={{
-        transform: `translate(${floatX}px, ${floatY}px) rotate(${angle}deg) scale(${scale})`,
+        transform: `translate(${float.x}px, ${float.y}px) rotate(${angle + tilt}deg) scale(${scale})`,
         display: "inline-block",
         position: "relative",
       }}
@@ -68,12 +71,12 @@ export const VectorSatellite: React.FC<VectorSatelliteProps> = ({
           <rect width="76" height="110" rx="14" fill="url(#gold-foil)" stroke="#FDE68A" strokeWidth="2" />
           {/* Linhas de blindagem térmica */}
           <rect x="10" y="15" width="56" height="40" rx="6" fill="rgba(0, 0, 0, 0.18)" />
-          <circle cx="28" cy="35" r="5" fill="#38BDF8" />
-          <circle cx="48" cy="35" r="5" fill="#10B981" />
+          <circle cx="28" cy="35" r="5" fill="#38BDF8" opacity={ledGlow1} />
+          <circle cx="48" cy="35" r="5" fill="#10B981" opacity={ledGlow2} />
           {/* Antena Parabólica Transmissora voltada para a Terra */}
           <path d="M 18 110 Q 38 135 58 110 Z" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1.5" />
           <line x1="38" y1="125" x2="38" y2="148" stroke="#38BDF8" strokeWidth="3" strokeLinecap="round" />
-          <circle cx="38" cy="148" r="4" fill="#38BDF8" />
+          <circle cx="38" cy="148" r={4 * antennaPulse} fill="#38BDF8" opacity={ledGlow1} />
         </g>
 
         {/* 4. Ondas de Rádio / Pulso de Sinal GPS descendo */}

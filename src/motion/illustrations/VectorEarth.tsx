@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { MOTION_PALETTE } from "../tokens";
-import { floatLoop } from "../presets";
+import { float2D, pulseLoop, shimmerGlow, tiltLoop } from "../presets";
 
 export interface VectorEarthProps {
   size?: number;
@@ -16,7 +16,10 @@ export const VectorEarth: React.FC<VectorEarthProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const rotation = (frame * 0.4) % 360;
-  const floatY = floatLoop(frame, 35, 8);
+  const float = float2D(frame, 45, 35, 5, 8);
+  const tilt = tiltLoop(frame, 55, 1.5);
+  const haloPulse = pulseLoop(frame, 30, 0.04);
+  const haloGlow = shimmerGlow(frame, 35, 0.7, 1);
 
   const radius = size * 0.4;
   const cx = size / 2;
@@ -28,7 +31,7 @@ export const VectorEarth: React.FC<VectorEarthProps> = ({
         width: size,
         height: size,
         position: "relative",
-        transform: `translateY(${floatY}px)`,
+        transform: `translate(${float.x}px, ${float.y}px) rotate(${tilt}deg)`,
         display: "grid",
         placeItems: "center",
       }}
@@ -54,11 +57,11 @@ export const VectorEarth: React.FC<VectorEarthProps> = ({
         </defs>
 
         {/* 1. Halo Atmosférico Externo */}
-        <circle cx={cx} cy={cy} r={radius * 1.25} fill="url(#earth-glow)" />
+        <circle cx={cx} cy={cy} r={radius * 1.25 * haloPulse} fill="url(#earth-glow)" opacity={haloGlow} />
 
         {/* 2. Anéis Orbitais de Satélites */}
         {showOrbits && (
-          <g opacity={0.35}>
+          <g opacity={0.4}>
             {Array.from({ length: orbitCount }).map((_, i) => {
               const rx = radius * (1.35 + i * 0.22);
               const ry = radius * (0.45 + i * 0.1);
@@ -74,6 +77,7 @@ export const VectorEarth: React.FC<VectorEarthProps> = ({
                   stroke={MOTION_PALETTE.cyanSignal}
                   strokeWidth="1.5"
                   strokeDasharray="6 8"
+                  strokeDashoffset={-frame * (0.6 + i * 0.25)}
                   transform={`rotate(${angle} ${cx} ${cy})`}
                 />
               );

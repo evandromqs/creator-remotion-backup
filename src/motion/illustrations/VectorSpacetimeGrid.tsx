@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { pulseLoop } from "../presets";
+import { float2D, floatLoop, pulseLoop, shimmerGlow } from "../presets";
 
 export interface VectorSpacetimeGridProps {
   width?: number;
@@ -13,6 +13,10 @@ export const VectorSpacetimeGrid: React.FC<VectorSpacetimeGridProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const pulse = pulseLoop(frame, 25, 0.05);
+  const warpWave = floatLoop(frame, 35, 6);
+  const earthFloat = float2D(frame, 45, 35, 3, 5);
+  const earthPulse = pulseLoop(frame, 30, 0.03);
+  const labelGlow = shimmerGlow(frame, 28, 0.65, 1);
 
   const cx = width / 2;
   const cy = height * 0.58;
@@ -33,7 +37,7 @@ export const VectorSpacetimeGrid: React.FC<VectorSpacetimeGridProps> = ({
           {[-60, -30, 0, 30, 60, 90].map((yOffset, i) => (
             <path
               key={i}
-              d={`M 20 ${cy + yOffset} Q ${cx} ${cy + yOffset + 45} ${width - 20} ${cy + yOffset}`}
+              d={`M 20 ${cy + yOffset} Q ${cx} ${cy + yOffset + 45 + warpWave} ${width - 20} ${cy + yOffset}`}
               fill="none"
             />
           ))}
@@ -55,8 +59,19 @@ export const VectorSpacetimeGrid: React.FC<VectorSpacetimeGridProps> = ({
         <ellipse cx={cx} cy={cy + 35} rx={160 * pulse} ry={60 * pulse} fill="url(#warp-glow)" />
 
         {/* 3. Massa da Terra no Centro Curvando o Espaço-Tempo */}
-        <circle cx={cx} cy={cy + 10} r="48" fill="#1D4ED8" stroke="#60A5FA" strokeWidth="2.5" />
-        <circle cx={cx} cy={cy + 10} r="48" fill="none" stroke="#38BDF8" strokeWidth="1" strokeDasharray="6 6" />
+        <g transform={`translate(${earthFloat.x}, ${earthFloat.y})`}>
+          <circle cx={cx} cy={cy + 10} r={48 * earthPulse} fill="#1D4ED8" stroke="#60A5FA" strokeWidth="2.5" />
+          <circle
+            cx={cx}
+            cy={cy + 10}
+            r={48 * earthPulse}
+            fill="none"
+            stroke="#38BDF8"
+            strokeWidth="1"
+            strokeDasharray="6 6"
+            strokeDashoffset={-frame * 0.6}
+          />
+        </g>
 
         {/* Anotação Visual da Gravidade */}
         <text
@@ -68,6 +83,7 @@ export const VectorSpacetimeGrid: React.FC<VectorSpacetimeGridProps> = ({
           fontWeight="800"
           fontFamily="'Space Grotesk', sans-serif"
           letterSpacing="0.08em"
+          opacity={labelGlow}
         >
           CURVATURA DO ESPAÇO-TEMPO
         </text>
